@@ -1,0 +1,1 @@
+This is a UI5 Practise Project, where i am creating UI5 application completely from scratch.
