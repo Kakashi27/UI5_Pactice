@@ -4,14 +4,16 @@
 <head>
 	<meta charset="utf-8">
 	<title>Practice UI5 App</title>
-	<script id="sap-ui-bootstrap" src="resources/sap-ui-core.js" data-sap-ui-theme="sap_fiori_3"
-		data-sap-ui-compatVersion="edge" data-sap-ui-libs="sap.m"></script>
-	<script>
-		var oText = new sap.m.Text({
-			text: "Hello World"
-		});
-		oText.placeAt("content");
-	</script>
+	<script 
+	id="sap-ui-bootstrap" 
+	src="resources/sap-ui-core.js" 
+	data-sap-ui-theme="sap_fiori_3"
+	data-sap-ui-compatVersion="edge" 
+	data-sap-ui-async="true"
+	data-sap-ui-onInit="module:practice/index"
+	data-sap-ui-resourceroots='{
+		"practice" : "./"
+	}'></script>
 </head>
 <body class="sapUiBody" id="content">
 
