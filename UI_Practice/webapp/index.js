@@ -1,13 +1,17 @@
 sap.ui.define([
-    'sap/ui/core/mvc/XMLView'
-], function(XMLView) {
+    'sap/ui/core/ComponentContainer'
+], function(ComponentContainer) {
     'use strict';
     
-    //Instantiating a View
-    XMLView.create({
-        id: "App",
-        viewName: "practice.view.App"
-    }).then(function(oView) {
-        oView.placeAt("content");
+    var oContainer = new ComponentContainer({
+        id: "container",
+        name: "practice",
+        manifest: true,
+        async: true,
+        settings: {
+            id: "practice",
+        }
     });
+
+    oContainer.placeAt("content");
 });
