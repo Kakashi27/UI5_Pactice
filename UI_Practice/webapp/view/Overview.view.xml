@@ -11,6 +11,8 @@
                 headerText="New Customer"
                 expandable="true"
                 expanded="true"
+                class="sapUiResponsiveMargin sapUiHideOnPhone" 
+                width="auto"
             >
                 <content>
                     <f:SimpleForm
