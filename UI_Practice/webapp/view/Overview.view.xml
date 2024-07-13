@@ -4,6 +4,7 @@
     xmlns="sap.m"
     xmlns:f="sap.ui.layout.form"
     xmlns:core="sap.ui.core"
+    core:require="{formatter: 'practice/model/formatter'}"
 >
     <Page title="Flight Customers">
         <content>
@@ -162,7 +163,7 @@
                             <ObjectIdentifier title="{ConnectionNumber}" />
 
                             <ObjectIdentifier title="{ path: 'FlightDate', type: 'sap.ui.model.type.Date', formatOptions: { source: {pattern: 'yyyy-MM-dd'}, style: 'medium' } }"/>
-                            <Text text="{Class}" />
+                            <Text text="{ path: 'Class', formatter: 'formatter.classText' }"/>
                             <ObjectNumber number="{ parts: [ {path: 'ForeignCurrencyPayment'}, {path: 'ForeignCurrency'} ], type: 'sap.ui.model.type.Currency', formatOptions: {showMeasure: false} }" unit="{ForeignCurrency}"/>
                             <Text text="{IsCancelled}" />
                         </cells>
