@@ -1,27 +1,31 @@
-sap.ui.define([
-    'sap/ui/core/UIComponent',
-    'sap/ui/Device'
-], function(UIComponent, Device) {
-    'use strict';
-    
+sap.ui.define(
+  ["sap/ui/core/UIComponent", "sap/ui/Device", "sap/ui/model/json/JSONModel"],
+  function (UIComponent, Device, JSONModel) {
+    "use strict";
+
     return UIComponent.extend("practice.Component", {
-        metadata: {
-            manifest: "json"
-        },
+      metadata: {
+        manifest: "json",
+      },
 
-        init: function() {
-            UIComponent.prototype.init.apply(this, arguments);
-        },
+      init: function () {
+        UIComponent.prototype.init.apply(this, arguments);
 
-        getContentDensityClass: function () {
-            if (!this._sContentDensityClass) {
-              if (Device.support.touch) {
-                this._sContentDensityClass = "sapUiSizeCozy";
-              } else {
-                this._sContentDensityClass = "sapUiSizeCompact";
-              }
-            }
-            return this._sContentDensityClass;
+        var oDeviceModel = new JSONModel(Device);
+        oDeviceModel.setDefaultBindingMode("OneWay");
+        this.setModel(oDeviceModel, "device");
+      },
+
+      getContentDensityClass: function () {
+        if (!this._sContentDensityClass) {
+          if (Device.support.touch) {
+            this._sContentDensityClass = "sapUiSizeCozy";
+          } else {
+            this._sContentDensityClass = "sapUiSizeCompact";
           }
+        }
+        return this._sContentDensityClass;
+      },
     });
-});
+  }
+);
