@@ -190,10 +190,12 @@
                     </ColumnListItem>
                 </items>
             </Table>
-            <Table items="{northwind>/Customers}" growing="true" growingThreshold="10" >
+            <Table id="idMockTable" items="{northwind>/Customers}" growing="true" growingThreshold="10" >
                 <headerToolbar>
                     <OverflowToolbar >
                         <Title text="Customers Table from oData Service"></Title>
+                        <ToolbarSpacer />
+                        <Button text="Create a new Dummy Entry" press="onDummyCreate" ></Button>
                     </OverflowToolbar>
                 </headerToolbar>
                 <columns>

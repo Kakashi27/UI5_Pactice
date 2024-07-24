@@ -3,11 +3,12 @@ sap.ui.define(
    "sap/ui/core/syncStyleClass",
   "sap/ui/model/json/JSONModel",
   "sap/ui/model/Filter",
-  "sap/ui/model/FilterOperator"],
+  "sap/ui/model/FilterOperator",
+  "sap/m/MessageToast"],
   /**
    * @param {typeof sap.ui.core.mvc.Controller} Controller
    */
-  function (Controller, syncStyleClass, JSONModel, Filter, FilterOperator) {
+  function (Controller, syncStyleClass, JSONModel, Filter, FilterOperator, MessageToast) {
     "use strict";
 
     return Controller.extend("practice.controller.Overview", {
@@ -50,6 +51,27 @@ sap.ui.define(
         var oTable = this.byId("customerTable");
         var oBinding = oTable.getBinding("items");
         oBinding.filter(aFilter);
+      },
+
+      onDummyCreate: function(oEvent) {
+        var oResourceBundle = this.getView().getModel("i18n").getResourceBundle();
+
+        // Ideally in the 'create' method , we can actually insert data from a Form.
+        this.getView().byId("idMockTable").getBinding("items").create({
+          "CustomerID": "AKN",
+          "CompanyName": "Test Company",
+          "ContactName": "Anil Nagvanshi",
+          "ContactTitle": "Owner",
+          "Address": "Street 6/9",
+          "City": "Bangalore",
+          "Region": null,
+          "PostalCode": "122334",
+          "Country": "India",
+          "Phone": "030-0074321",
+          "Fax": "030-0076545"
+        }).created().then(function () {
+          MessageToast.show(oResourceBundle.getText("customerCreatedMessage"));
+        });
       }
     });
   }
