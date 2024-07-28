@@ -53,7 +53,7 @@
         "type": "sap.ui.model.json.JSONModel",
         "uri": "model/data.json"
       },
-      "northwind" : {
+      "northwind": {
         "dataSource": "mainService"
       }
     },
@@ -71,10 +71,23 @@
         "viewType": "XML",
         "async": true,
         "viewPath": "practice.view",
-        "controlAggregation": "pages"
+        "controlAggregation": "pages",
+        "controlId": "app"
       },
-      "routes": [],
-      "targets": {}
+      "routes": [
+        {
+          "name": "overview",
+          "pattern": "",
+          "target": ["overview"]
+        }
+      ],
+      "targets": {
+        "overview": {
+          "viewId": "overview",
+          "viewName": "Overview",
+          "viewLevel": 1
+        }
+      }
     },
     "rootView": {
       "id": "App",

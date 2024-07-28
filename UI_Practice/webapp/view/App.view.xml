@@ -5,10 +5,8 @@
     displayBlock="true"
 >
     <Shell>
-        <App>
-            <pages>
-                <mvc:XMLView viewName="practice.view.Overview" />
-            </pages>
+        <App id="app">
+           
         </App>
     </Shell>
 </mvc:View>
