@@ -72,6 +72,11 @@ sap.ui.define(
         }).created().then(function () {
           MessageToast.show(oResourceBundle.getText("customerCreatedMessage"));
         });
+      },
+
+      onNavToDetails: function () {
+        var oRouter = this.getOwnerComponent().getRouter();
+        oRouter.navTo("detail");
       }
     });
   }

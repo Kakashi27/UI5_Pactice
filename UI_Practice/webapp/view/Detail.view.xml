@@ -1,0 +1,9 @@
+<mvc:View
+    controllerName="practice.controller.Detail"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+>
+    <Page title="{i18n>detailPageTitle}">
+        <content />
+    </Page>
+</mvc:View>
