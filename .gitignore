@@ -1,15 +1,7 @@
 /.vscode
 Yeoman_Generator/node_modules
 Yeoman_Generator/package-lock.json
-UI_Practice/node_modules
-UI_Practice/package-lock.json
-Fiori_Practice_Application/node_modules/
-Fiori_Practice_Application/dist/
-Fiori_Practice_Application/.scp/
-Fiori_Practice_Application/.env
-Fiori_Practice_Application/Makefile*.mta
-Fiori_Practice_Application/mta_archives
-Fiori_Practice_Application/mta-*
-Fiori_Practice_Application/resources
-Fiori_Practice_Application/archive.zip
-Fiori_Practice_Application/.*_mta_build_tmp
+App from Scratch/node_modules
+App from Scratch/package-lock.json
+Yeoman_Generator/node_modules
+Yeoman_Generator/package-lock.json
