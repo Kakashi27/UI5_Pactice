@@ -7,3 +7,5 @@ Yeoman_Generator/node_modules
 Yeoman_Generator/package-lock.json
 FullScreen Applications/ux402_fullscreen/node_modules
 FullScreen Applications/ux402_fullscreenpackage-lock.json
+List_Detail Applications/ux402_listdetail/node_modules
+List_Detail Applications/ux402_listdetail/package-lock.json
