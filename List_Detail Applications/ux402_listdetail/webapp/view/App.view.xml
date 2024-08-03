@@ -1,7 +1,8 @@
-<mvc:View controllerName="student27.com.sap.training.ux402.listdetail.ux402listdetail.controller.App"
+<mvc:View xmlns:f="sap.f" controllerName="student27.com.sap.training.ux402.listdetail.ux402listdetail.controller.App"
     xmlns:html="http://www.w3.org/1999/xhtml"
     xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
     xmlns="sap.m">
     <App id="app">
+        <f:FlexibleColumnLayout id="layout" layout="{mainView>/layout}" backgroundDesign="Translucent" ></f:FlexibleColumnLayout>
     </App>
 </mvc:View>
