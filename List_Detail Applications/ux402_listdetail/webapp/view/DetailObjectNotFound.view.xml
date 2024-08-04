@@ -1,7 +1,10 @@
 <mvc:View controllerName="student27.com.sap.training.ux402.listdetail.ux402listdetail.controller.DetailObjectNotFound"
     xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
     xmlns="sap.m">
-    <Page id="page" title="{i18n>title}">
-        <content />
-    </Page>
+    <IllustratedMessage id="_IDGenIllustratedMessage1" title="" description="" 
+    illustrationType="sapIllus-NoData">
+        <additionalContent>
+            <Button id="_IDGenButton1" text="Home / Back" press="onNavBack" ></Button>
+        </additionalContent>
+    </IllustratedMessage>
 </mvc:View>
