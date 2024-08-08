@@ -23,21 +23,20 @@ sap.ui.define(["sap/ui/base/Object"], function (BaseObject) {
                       error: true,
                     });
                   }
+                  var oFirstListItem = oList.getItmes()[0];
+                  if (oFirstListItem) {
+                    fnResolve({
+                      list: oList,
+                      oFirstListItem: oFirstListItem,
+                    });
+                  } else {
+                    // No items in the list
+                    fnReject({
+                      list: oList,
+                      error: false,
+                    });
+                  }
                 });
-
-              var oFirstListItem = oList.getItmes()[0];
-              if (oFirstListItem) {
-                fnResolve({
-                  list: oList,
-                  oFirstListItem: oFirstListItem,
-                });
-              } else {
-                // No items in the list
-                fnReject({
-                  list: oList,
-                  error: false,
-                });
-              }
             });
           }.bind(this)
         );
