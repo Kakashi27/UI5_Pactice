@@ -17,6 +17,8 @@ sap.ui.define([
 		Then.onTheAppPage.iShouldSeeTheApp();
       	Then.onTheViewPage.iShouldSeeThePageView();
 
+		Then.onTheViewPage.iShouldFindAButton();
+
 		//Cleanup
 		Then.iTeardownMyApp();
 	});
